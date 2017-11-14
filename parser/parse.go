@@ -3,7 +3,7 @@ package util
 import (
 	"log"
 	"github.com/PuerkitoBio/goquery"
-	"../model"
+	"github.com/nilemarbarcelos/nfl-scores/model"
 )
 
 func Parse()  []model.Game {

@@ -4,7 +4,7 @@ import (
 	"log"
 	"net/http"
 	"github.com/gorilla/mux"
-	"./controller"	
+	"github.com/nilemarbarcelos/nfl-scores/controller"
 )
 
 func main() {

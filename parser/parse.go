@@ -2,19 +2,20 @@ package parser
 
 import (
 	"log"
+
 	"github.com/PuerkitoBio/goquery"
 	"github.com/nilemarbarcelos/nfl-scores/model"
 )
 
-func Parse()  []model.Game {
+func Parse() []model.Game {
 	doc, err := goquery.NewDocument("http://www.nfl.com/scores/2017/REG10")
 	if err != nil {
-	  log.Fatal(err)
+		log.Fatal(err)
 	}
 	games := []model.Game{}
 	// Find the review items
 	doc.Find(".new-score-box-wrapper").Each(func(i int, s *goquery.Selection) {
-	  // For each item found, get the band and title
+		// For each item found, get the band and title
 		date := s.Find(".new-score-box-heading .date").Text()
 		network := s.Find(".new-score-box-heading .network").Text()
 		home := s.Find(".team-wrapper .home-team .team-data .team-name").Text()
@@ -23,17 +24,17 @@ func Parse()  []model.Game {
 		awayScore := s.Find(".team-wrapper .away-team .team-data .total-score").Text()
 
 		games = append(games, model.Game{
-			Date: date,
-			Network: network,
-			Home: home,
+			Date:      date,
+			Network:   network,
+			Home:      home,
 			HomeScore: homeScore,
-			Away: away,
+			Away:      away,
 			AwayScore: awayScore,
 		})
 
 	})
 	return games
-  }
+}
 
 //   <div class="new-score-box-wrapper" id="scorebox-2017110900">
 //   <div class="new-score-box-heading" id="yui_3_10_3_2_1510613392638_21456">
@@ -44,7 +45,7 @@ func Parse()  []model.Game {
 // 			  <span class="total-score">TOTAL</span>
 // 			  <span class="quarters-score">
 // 				  <span>1</span><span>2</span><span>3</span><span>4</span><span>OT</span>
-// 			  </span> 
+// 			  </span>
 // 		  </span>
 // 	  </p>
 //   </div>
@@ -55,9 +56,9 @@ func Parse()  []model.Game {
 // 			  <div class="team-data" id="yui_3_10_3_2_1510613392638_2268">
 // 				  <div class="team-info" id="yui_3_10_3_2_1510613392638_2267">
 // 					  <p class="team-record">
-						  
+
 // 							  <a href="/teams/profile?team=SEA" onclick="s_objectID=&quot;http://www.nfl.com/teams/profile?team=SEA_2&quot;;return this.s_oc?this.s_oc(e):true">(6-3-0)</a>
-						  
+
 // 					  </p>
 // 					  <p class="team-name" id="yui_3_10_3_2_1510613392638_2266"><a href="/teams/profile?team=SEA" onclick="s_objectID=&quot;http://www.nfl.com/teams/profile?team=SEA_3&quot;;return this.s_oc?this.s_oc(e):true" id="yui_3_10_3_2_1510613392638_2265">Seahawks</a></p>
 // 				  </div>
@@ -73,9 +74,9 @@ func Parse()  []model.Game {
 // 			  <div class="team-data">
 // 				  <div class="team-info">
 // 					  <p class="team-record">
-						  
+
 // 							  <a href="/teams/profile?team=ARI" onclick="s_objectID=&quot;http://www.nfl.com/teams/profile?team=ARI_2&quot;;return this.s_oc?this.s_oc(e):true">(4-5-0)</a>
-						  
+
 // 					  </p>
 // 					  <p class="team-name"><a href="/teams/profile?team=ARI" onclick="s_objectID=&quot;http://www.nfl.com/teams/profile?team=ARI_3&quot;;return this.s_oc?this.s_oc(e):true">Cardinals</a></p>
 // 				  </div>
@@ -90,14 +91,14 @@ func Parse()  []model.Game {
 // 		  <div style="clear:right"></div>
 // 		  <div class="big-plays"><span class="title">BIG PLAYS</span><span class="big-plays-count">11</span></div>
 // 		  <div style="clear:both"></div>
-		   
+
 // 			  <div class="highlight-link">
 // 				  <a href="/gamecenter/2017110900/2017/REG10/seahawks@cardinals#menu=highlights|contentId:0ap3000000874863&amp;tab=analyze" onclick="s_objectID=&quot;http://www.nfl.com/gamecenter/2017110900/2017/REG10/seahawks@cardinals#menu=highlights|contentId:_1&quot;;return this.s_oc?this.s_oc(e):true">
 // 					  <div class="highlight-button"><div class="highlight-arrow"></div></div>
 // 					  <p>Seahawks vs. Cardinals highlights | Week 10</p>
 // 				  </a>
 // 			  </div>
-		  
+
 // 	  </div>
 // 	  <div class="products-social">
 // 		  <p>

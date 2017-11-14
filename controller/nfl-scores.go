@@ -3,6 +3,7 @@ package controller
 import (
 	"encoding/json"
 	"net/http"
+
 	"github.com/nilemarbarcelos/nfl-scores/parser"
 )
 

@@ -27,12 +27,6 @@
 
 [[projects]]
   branch = "master"
-  name = "github.com/nilemarbarcelos/nfl-scores"
-  packages = ["controller","model","parser"]
-  revision = "8f7a4a40f1146a109a40e12babfeb61284b2a8af"
-
-[[projects]]
-  branch = "master"
   name = "golang.org/x/net"
   packages = ["html","html/atom"]
   revision = "9dfe39835686865bff950a07b394c12a98ddc811"
@@ -40,6 +34,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "5d7852d9b2c9bc85de2709bd6cdc95d20d24149de471b278c6457f33269fe3a5"
+  inputs-digest = "e394483459789c4f35060255aac960694fff8dfeac5c1faf895f567b12ee3356"
   solver-name = "gps-cdcl"
   solver-version = 1

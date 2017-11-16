@@ -8,14 +8,13 @@ import (
 )
 
 func Parse() []model.Game {
-	doc, err := goquery.NewDocument("http://www.nfl.com/scores/2017/REG10")
+	doc, err := goquery.NewDocument("http://www.nfl.com/scores/2017/REG11")
 	if err != nil {
 		log.Fatal(err)
 	}
 	games := []model.Game{}
-	// Find the review items
+
 	doc.Find(".new-score-box-wrapper").Each(func(i int, s *goquery.Selection) {
-		// For each item found, get the band and title
 		date := s.Find(".new-score-box-heading .date").Text()
 		network := s.Find(".new-score-box-heading .network").Text()
 		home := s.Find(".team-wrapper .home-team .team-data .team-name").Text()
@@ -23,13 +22,21 @@ func Parse() []model.Game {
 		away := s.Find(".team-wrapper .away-team .team-data .team-name").Text()
 		awayScore := s.Find(".team-wrapper .away-team .team-data .total-score").Text()
 
+		homeTeam := model.Team{
+			Name:  home,
+			Score: homeScore,
+		}
+
+		awayTeam := model.Team{
+			Name:  away,
+			Score: awayScore,
+		}
+
 		games = append(games, model.Game{
-			Date:      date,
-			Network:   network,
-			Home:      home,
-			HomeScore: homeScore,
-			Away:      away,
-			AwayScore: awayScore,
+			Date:    date,
+			Network: network,
+			Home:    homeTeam,
+			Away:    awayTeam,
 		})
 
 	})

@@ -1,10 +1,13 @@
 package model
 
 type Game struct {
-	Date 	string	`json:"date"`
-	Network string 	`json:"network"`
-	Home 	string 	`json:"home"`
-	HomeScore 	string 	`json:"homeScore"`
-	Away 	string 	`json:"away"`
-	AwayScore 	string 	`json:"awayScore"`
+	Date    string `json:"date"`
+	Network string `json:"network"`
+	Home    Team   `json:"home"`
+	Away    Team   `json:"away"`
+}
+
+type Team struct {
+	Name  string `json:"name"`
+	Score string `json:"score"`
 }

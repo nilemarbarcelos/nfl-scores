@@ -10,6 +10,6 @@ import (
 
 func FindGames(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
-	games := parser.Parse(vars["week"])
+	games := parser.Parse(vars["season"], vars["week"])
 	json.NewEncoder(w).Encode(games)
 }

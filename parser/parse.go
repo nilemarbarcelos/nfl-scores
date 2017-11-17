@@ -7,8 +7,9 @@ import (
 	"github.com/nilemarbarcelos/nfl-scores/model"
 )
 
-func Parse() []model.Game {
-	doc, err := goquery.NewDocument("http://www.nfl.com/scores/2017/REG11")
+func Parse(week string) []model.Game {
+	rootURL := "http://www.nfl.com/scores/2017/REG" + week
+	doc, err := goquery.NewDocument(rootURL)
 	if err != nil {
 		log.Fatal(err)
 	}

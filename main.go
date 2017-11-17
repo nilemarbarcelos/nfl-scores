@@ -10,7 +10,7 @@ import (
 
 func main() {
 	nfl := mux.NewRouter()
-	nfl.Path("/nfl-scores").Methods(http.MethodGet).HandlerFunc(controller.FindGames)
+	nfl.Path("/nfl-scores/{week}").Methods(http.MethodGet).HandlerFunc(controller.FindGames)
 
 	if err := http.ListenAndServe(":3000", nfl); err != nil {
 		log.Fatal(err)

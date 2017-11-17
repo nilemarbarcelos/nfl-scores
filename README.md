@@ -16,7 +16,7 @@
          "name":"Seahawks",
          "score":"22"
       },
-      "timeLeft":"FINAL "
+      "time":"FINAL "
    },
    {  
       "date":"Sun, Nov 12",
@@ -29,7 +29,7 @@
          "name":"Packers",
          "score":"23"
       },
-      "timeLeft":"FINAL "
+      "time":"FINAL "
    },
    {  
       "date":"Sun, Nov 12",
@@ -42,7 +42,7 @@
          "name":"Browns",
          "score":"24"
       },
-      "timeLeft":"FINAL "
+      "time":"FINAL "
    },
    {  
       "date":"Sun, Nov 12",
@@ -55,7 +55,7 @@
          "name":"Steelers",
          "score":"20"
       },
-      "timeLeft":"FINAL "
+      "time":"FINAL "
    },
    {  
       "date":"Sun, Nov 12",
@@ -68,7 +68,7 @@
          "name":"Chargers",
          "score":"17"
       },
-      "timeLeft":"FINAL OT"
+      "time":"FINAL OT"
    },
    {  
       "date":"Sun, Nov 12",
@@ -81,7 +81,7 @@
          "name":"Saints",
          "score":"47"
       },
-      "timeLeft":"FINAL "
+      "time":"FINAL "
    },
    {  
       "date":"Sun, Nov 12",
@@ -94,7 +94,7 @@
          "name":"Jets",
          "score":"10"
       },
-      "timeLeft":"FINAL "
+      "time":"FINAL "
    },
    {  
       "date":"Sun, Nov 12",
@@ -107,7 +107,7 @@
          "name":"Vikings",
          "score":"38"
       },
-      "timeLeft":"FINAL "
+      "time":"FINAL "
    },
    {  
       "date":"Sun, Nov 12",
@@ -120,7 +120,7 @@
          "name":"Bengals",
          "score":"20"
       },
-      "timeLeft":"FINAL "
+      "time":"FINAL "
    },
    {  
       "date":"Sun, Nov 12",
@@ -133,7 +133,7 @@
          "name":"Texans",
          "score":"7"
       },
-      "timeLeft":"FINAL "
+      "time":"FINAL "
    },
    {  
       "date":"Sun, Nov 12",
@@ -146,7 +146,7 @@
          "name":"Cowboys",
          "score":"7"
       },
-      "timeLeft":"FINAL "
+      "time":"FINAL "
    },
    {  
       "date":"Sun, Nov 12",
@@ -159,7 +159,7 @@
          "name":"Giants",
          "score":"21"
       },
-      "timeLeft":"FINAL "
+      "time":"FINAL "
    },
    {  
       "date":"Sun, Nov 12",
@@ -172,7 +172,7 @@
          "name":"Patriots",
          "score":"41"
       },
-      "timeLeft":"FINAL "
+      "time":"FINAL "
    },
    {  
       "date":"Mon, Nov 13",
@@ -185,7 +185,7 @@
          "name":"Dolphins",
          "score":"21"
       },
-      "timeLeft":"FINAL "
+      "time":"FINAL "
    }
 ]
 ```

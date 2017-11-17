@@ -5,6 +5,7 @@ type Game struct {
 	Network string `json:"network"`
 	Home    Team   `json:"home"`
 	Away    Team   `json:"away"`
+	Time    string `json:"time"`
 }
 
 type Team struct {

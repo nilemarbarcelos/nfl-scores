@@ -22,6 +22,7 @@ func Parse(season string, week string) []model.Game {
 		homeScore := s.Find(".team-wrapper .home-team .team-data .total-score").Text()
 		away := s.Find(".team-wrapper .away-team .team-data .team-name").Text()
 		awayScore := s.Find(".team-wrapper .away-team .team-data .total-score").Text()
+		time := s.Find(".game-center-area .time-left").Text()
 
 		homeTeam := model.Team{
 			Name:  home,
@@ -38,6 +39,7 @@ func Parse(season string, week string) []model.Game {
 			Network: network,
 			Home:    homeTeam,
 			Away:    awayTeam,
+			Time:    time,
 		})
 
 	})

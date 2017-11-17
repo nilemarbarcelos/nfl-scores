@@ -7,13 +7,19 @@ import (
 	"github.com/nilemarbarcelos/nfl-scores/model"
 )
 
-func Parse(season string, week string) []model.Game {
-	rootURL := "http://www.nfl.com/scores/" + season + "/REG" + week
+func Parse(season string, weekNumber string) model.Week {
+	rootURL := "http://www.nfl.com/scores/" + season + "/REG" + weekNumber
 	doc, err := goquery.NewDocument(rootURL)
 	if err != nil {
 		log.Fatal(err)
 	}
+
 	games := []model.Game{}
+	var byes []string
+
+	doc.Find(".bye a").Each(func(i int, s *goquery.Selection) {
+		byes = append(byes, s.Text())
+	})
 
 	doc.Find(".new-score-box-wrapper").Each(func(i int, s *goquery.Selection) {
 		date := s.Find(".new-score-box-heading .date").Text()
@@ -43,5 +49,6 @@ func Parse(season string, week string) []model.Game {
 		})
 
 	})
-	return games
+	week := model.Week{games, byes}
+	return week
 }

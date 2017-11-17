@@ -1,5 +1,10 @@
 package model
 
+type Week struct {
+	Games []Game   `json:"games"`
+	Byes  []string `json:"byes"`
+}
+
 type Game struct {
 	Date    string `json:"date"`
 	Network string `json:"network"`

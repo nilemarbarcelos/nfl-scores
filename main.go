@@ -5,6 +5,7 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
+	"github.com/nilemarbarcelos/nfl-scores/config"
 	"github.com/nilemarbarcelos/nfl-scores/controller"
 )
 
@@ -12,7 +13,7 @@ func main() {
 	nfl := mux.NewRouter()
 	nfl.Path("/nfl-scores/{season}/{week}").Methods(http.MethodGet).HandlerFunc(controller.FindGames)
 
-	if err := http.ListenAndServe(":3000", nfl); err != nil {
+	if err := http.ListenAndServe(":"+config.Get().Port, nfl); err != nil {
 		log.Fatal(err)
 	}
 }

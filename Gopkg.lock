@@ -14,6 +14,12 @@
   revision = "349dd0209470eabd9514242c688c403c0926d266"
 
 [[projects]]
+  name = "github.com/caarlos0/env"
+  packages = ["."]
+  revision = "9de094f90fa8a13dc162e10ae8a3b95c0c2c33e1"
+  version = "v3.1.1"
+
+[[projects]]
   name = "github.com/gorilla/context"
   packages = ["."]
   revision = "1ea25387ff6f684839d82767c1733ff4d4d15d0a"
@@ -34,6 +40,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "e394483459789c4f35060255aac960694fff8dfeac5c1faf895f567b12ee3356"
+  inputs-digest = "f9bcd1814cddc5bd396cc33a3b65c386950be3570ec67aa4b297cdb3909264a5"
   solver-name = "gps-cdcl"
   solver-version = 1

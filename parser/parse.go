@@ -2,6 +2,7 @@ package parser
 
 import (
 	"log"
+	"strings"
 
 	"github.com/PuerkitoBio/goquery"
 	"github.com/nilemarbarcelos/nfl-scores/model"
@@ -28,7 +29,7 @@ func Parse(season string, weekNumber string) model.Week {
 		homeScore := s.Find(".team-wrapper .home-team .team-data .total-score").Text()
 		away := s.Find(".team-wrapper .away-team .team-data .team-name").Text()
 		awayScore := s.Find(".team-wrapper .away-team .team-data .total-score").Text()
-		time := s.Find(".game-center-area .time-left").Text()
+		time := strings.TrimSpace(s.Find(".game-center-area .time-left").Text())
 
 		homeTeam := model.Team{
 			Name:  home,

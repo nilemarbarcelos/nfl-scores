@@ -2,198 +2,202 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/nilemarbarcelos/nfl-scores)](https://goreportcard.com/report/github.com/nilemarbarcelos/nfl-scores)
 [![GoDoc](https://godoc.org/github.com/nilemarbarcelos/nfl-scores?status.svg)](https://godoc.org/github.com/nilemarbarcelos/nfl-scores)
 
+### Request
+* https://scores-nfl.herokuapp.com/nfl-scores/{season}/{week}
+
 ### Response
+Request: https://scores-nfl.herokuapp.com/nfl-scores/2017/11
 ```json
 {  
    "games":[  
       {  
-         "date":"Thu, Nov 9",
-         "network":"nbc, NFLN",
+         "date":"Mon, Nov 20",
+         "network":"espn",
          "home":{  
-            "name":"Cardinals",
-            "score":"16"
+            "name":"Seahawks",
+            "score":"--"
          },
          "away":{  
-            "name":"Seahawks",
-            "score":"22"
+            "name":"Falcons",
+            "score":"--"
          },
-         "time":"FINAL "
+         "time":"8:30 PM  ET"
       },
       {  
-         "date":"Sun, Nov 12",
+         "date":"Thu, Nov 16",
+         "network":"nbc, NFLN",
+         "home":{  
+            "name":"Steelers",
+            "score":"40"
+         },
+         "away":{  
+            "name":"Titans",
+            "score":"17"
+         },
+         "time":"FINAL"
+      },
+      {  
+         "date":"Sun, Nov 19",
          "network":"fox",
          "home":{  
             "name":"Bears",
-            "score":"16"
-         },
-         "away":{  
-            "name":"Packers",
-            "score":"23"
-         },
-         "time":"FINAL "
-      },
-      {  
-         "date":"Sun, Nov 12",
-         "network":"cbs",
-         "home":{  
-            "name":"Lions",
-            "score":"38"
-         },
-         "away":{  
-            "name":"Browns",
             "score":"24"
          },
-         "time":"FINAL "
+         "away":{  
+            "name":"Lions",
+            "score":"27"
+         },
+         "time":"FINAL"
       },
       {  
-         "date":"Sun, Nov 12",
+         "date":"Sun, Nov 19",
          "network":"cbs",
          "home":{  
-            "name":"Colts",
-            "score":"17"
+            "name":"Browns",
+            "score":"7"
          },
          "away":{  
-            "name":"Steelers",
-            "score":"20"
-         },
-         "time":"FINAL "
-      },
-      {  
-         "date":"Sun, Nov 12",
-         "network":"cbs",
-         "home":{  
             "name":"Jaguars",
+            "score":"19"
+         },
+         "time":"FINAL"
+      },
+      {  
+         "date":"Sun, Nov 19",
+         "network":"cbs",
+         "home":{  
+            "name":"Packers",
+            "score":"0"
+         },
+         "away":{  
+            "name":"Ravens",
+            "score":"23"
+         },
+         "time":"FINAL"
+      },
+      {  
+         "date":"Sun, Nov 19",
+         "network":"fox",
+         "home":{  
+            "name":"Texans",
+            "score":"31"
+         },
+         "away":{  
+            "name":"Cardinals",
+            "score":"21"
+         },
+         "time":"FINAL"
+      },
+      {  
+         "date":"Sun, Nov 19",
+         "network":"fox",
+         "home":{  
+            "name":"Dolphins",
             "score":"20"
          },
          "away":{  
-            "name":"Chargers",
-            "score":"17"
+            "name":"Buccaneers",
+            "score":"30"
+         },
+         "time":"FINAL"
+      },
+      {  
+         "date":"Sun, Nov 19",
+         "network":"fox",
+         "home":{  
+            "name":"Vikings",
+            "score":"24"
+         },
+         "away":{  
+            "name":"Rams",
+            "score":"7"
+         },
+         "time":"FINAL"
+      },
+      {  
+         "date":"Sun, Nov 19",
+         "network":"cbs",
+         "home":{  
+            "name":"Giants",
+            "score":"12"
+         },
+         "away":{  
+            "name":"Chiefs",
+            "score":"9"
          },
          "time":"FINAL OT"
       },
       {  
-         "date":"Sun, Nov 12",
+         "date":"Sun, Nov 19",
          "network":"fox",
          "home":{  
-            "name":"Bills",
-            "score":"10"
+            "name":"Saints",
+            "score":"34"
          },
          "away":{  
-            "name":"Saints",
-            "score":"47"
+            "name":"Redskins",
+            "score":"31"
          },
-         "time":"FINAL "
+         "time":"FINAL OT"
       },
       {  
-         "date":"Sun, Nov 12",
+         "date":"Sun, Nov 19",
+         "network":"fox",
+         "home":{  
+            "name":"Chargers",
+            "score":"54"
+         },
+         "away":{  
+            "name":"Bills",
+            "score":"24"
+         },
+         "time":"FINAL"
+      },
+      {  
+         "date":"Sun, Nov 19",
          "network":"cbs",
          "home":{  
-            "name":"Buccaneers",
-            "score":"15"
-         },
-         "away":{  
-            "name":"Jets",
-            "score":"10"
-         },
-         "time":"FINAL "
-      },
-      {  
-         "date":"Sun, Nov 12",
-         "network":"fox",
-         "home":{  
-            "name":"Redskins",
-            "score":"30"
-         },
-         "away":{  
-            "name":"Vikings",
-            "score":"38"
-         },
-         "time":"FINAL "
-      },
-      {  
-         "date":"Sun, Nov 12",
-         "network":"fox",
-         "home":{  
-            "name":"Titans",
-            "score":"24"
+            "name":"Broncos",
+            "score":"17"
          },
          "away":{  
             "name":"Bengals",
             "score":"20"
          },
-         "time":"FINAL "
+         "time":"FINAL"
       },
       {  
-         "date":"Sun, Nov 12",
+         "date":"Sun, Nov 19",
          "network":"cbs",
          "home":{  
-            "name":"Rams",
-            "score":"33"
-         },
-         "away":{  
-            "name":"Texans",
-            "score":"7"
-         },
-         "time":"FINAL "
-      },
-      {  
-         "date":"Sun, Nov 12",
-         "network":"fox",
-         "home":{  
-            "name":"Falcons",
-            "score":"27"
-         },
-         "away":{  
-            "name":"Cowboys",
-            "score":"7"
-         },
-         "time":"FINAL "
-      },
-      {  
-         "date":"Sun, Nov 12",
-         "network":"fox",
-         "home":{  
-            "name":"49ers",
-            "score":"31"
-         },
-         "away":{  
-            "name":"Giants",
-            "score":"21"
-         },
-         "time":"FINAL "
-      },
-      {  
-         "date":"Sun, Nov 12",
-         "network":"nbc",
-         "home":{  
-            "name":"Broncos",
-            "score":"16"
+            "name":"Raiders",
+            "score":"8"
          },
          "away":{  
             "name":"Patriots",
-            "score":"41"
+            "score":"33"
          },
-         "time":"FINAL "
+         "time":"FINAL"
       },
       {  
-         "date":"Mon, Nov 13",
-         "network":"espn",
+         "date":"Sun, Nov 19",
+         "network":"nbc",
          "home":{  
-            "name":"Panthers",
-            "score":"45"
+            "name":"Cowboys",
+            "score":"9"
          },
          "away":{  
-            "name":"Dolphins",
-            "score":"21"
+            "name":"Eagles",
+            "score":"37"
          },
-         "time":"FINAL "
+         "time":"FINAL"
       }
    ],
    "byes":[  
-      "Ravens",
-      "Chiefs",
-      "Raiders",
-      "Eagles"
+      "Jets",
+      "Colts",
+      "49ers",
+      "Panthers"
    ]
 }
 ```

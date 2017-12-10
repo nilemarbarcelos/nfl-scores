@@ -14,6 +14,8 @@ type Game struct {
 }
 
 type Team struct {
-	Name  string `json:"name"`
-	Score string `json:"score"`
+	Name   string `json:"name"`
+	Score  string `json:"score"`
+	Record string `json:"record"`
+	Logo   string `json:"logo"`
 }
